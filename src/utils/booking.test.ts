@@ -11,6 +11,8 @@ import {
   createWhatsAppUrl,
 } from './booking';
 import { ServiceItem } from '../types';
+import { VIDEOS, MACRO_VIDEOS, HERO_CAROUSEL_SLIDES } from '../config/videos';
+import { LOOKBOOK_ITEMS } from '../data/salonData';
 
 const mockServices: ServiceItem[] = [
   {
@@ -138,8 +140,44 @@ test('formatWhatsAppBookingMessage and createWhatsAppUrl format correctly', () =
   assert.ok(msg.includes('Signature Haircut'));
   assert.ok(msg.includes('11:00 AM'));
   assert.ok(msg.includes('Bespoke razor finish'));
+  assert.ok(msg.includes('*Salon Location:*'));
 
   const url = createWhatsAppUrl('919575830421', msg);
   assert.ok(url.startsWith('https://wa.me/919575830421?text='));
   assert.ok(url.includes(encodeURIComponent('Aashif Khan')));
 });
+
+test('MACRO_VIDEOS and VIDEOS configure 3D macro video fallback chains and 3 Hinglish Hero slides properly', () => {
+  assert.equal(MACRO_VIDEOS.hero.localPath, '/videos/clipper-3d.mp4');
+  assert.equal(MACRO_VIDEOS.trustStrip.localPath, '/videos/razor-3d.mp4');
+  assert.equal(MACRO_VIDEOS.serviceMenu.localPath, '/videos/towel-3d.mp4');
+
+  assert.ok(MACRO_VIDEOS.hero.sources.includes('/videos/clipper-3d.mp4'));
+  assert.ok(MACRO_VIDEOS.trustStrip.sources.includes('/videos/razor-3d.mp4'));
+  assert.ok(MACRO_VIDEOS.serviceMenu.sources.includes('/videos/towel-3d.mp4'));
+
+  for (const url of Object.values(VIDEOS)) {
+    assert.ok(url.startsWith('https://'), `Expected external https URL, got ${url}`);
+  }
+
+  assert.equal(HERO_CAROUSEL_SLIDES.length, 3);
+  assert.equal(HERO_CAROUSEL_SLIDES[0].headline, 'Sirf Haircut Nahi, Aapka Pura Look Upgrade Karte Hain.');
+  assert.equal(HERO_CAROUSEL_SLIDES[1].headline, 'Sharpest Beard Line-Up. Har Customer Ke Liye Naya Blade.');
+  assert.equal(HERO_CAROUSEL_SLIDES[2].headline, '45 Minute Sukoon Ke. Thakan Mitao Aur Royal Look Paao.');
+});
+
+test('LOOKBOOK_ITEMS has 16 items (4 per category) and never reuses /barber.jpg or /logo.jpg', () => {
+  assert.equal(LOOKBOOK_ITEMS.length, 16);
+  const categories = ['Skin Fade', 'Beard Detailing', 'Hot Towel Shave', 'Salon'] as const;
+  for (const cat of categories) {
+    const count = LOOKBOOK_ITEMS.filter(item => item.category === cat).length;
+    assert.equal(count, 4, `Expected 4 items for ${cat}, got ${count}`);
+  }
+  for (const item of LOOKBOOK_ITEMS) {
+    assert.notEqual(item.image, '/barber.jpg');
+    assert.notEqual(item.image, '/logo.jpg');
+  }
+});
+
+
+

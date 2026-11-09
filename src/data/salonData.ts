@@ -1,10 +1,10 @@
-import { ServiceItem, FaceShapeGuide, ReviewItem } from '../types';
+import { ServiceItem, ReviewItem } from '../types';
 
 export const SALON_INFO = {
   name: "Shivangi Hair Salon",
-  headline: "Precision Grooming. Built for the Modern Gentleman.",
+  headline: "Sirf Haircut Nahi, Aapka Pura Look Upgrade Karte Hain.",
   subHeadline: "Haircuts, beard detailing, and grooming in Bhopal.",
-  tagline: "The Art of Modern Precision",
+  tagline: "Sharp Cuts & Clean Grooming",
   phone: "+91 9575830421",
   rawPhone: "919575830421",
   whatsAppUrl: "https://wa.me/919575830421",
@@ -25,139 +25,139 @@ export const SALON_INFO = {
 };
 
 export const TRUST_SIGNALS = [
-  { icon: 'star', label: '4.9 Google Rating', sub: '148+ Verified Bhopal Reviews' },
-  { icon: 'uv', label: 'UV Sterilized Tools', sub: 'Hospital-grade autoclaves' },
-  { icon: 'blade', label: 'Fresh Blades', sub: '100% single-use Japanese steel' },
-  { icon: 'walkin', label: 'Walk-ins Welcome', sub: 'Pre-bookings prioritized' },
+  { icon: 'star', label: '4.9 Google Rating', sub: '148+ Happy Bhopal Customers' },
+  { icon: 'uv', label: 'UV Cleaned Tools', sub: 'Sanitized after every customer' },
+  { icon: 'blade', label: '100% Fresh Blades', sub: 'New blade opened in front of you' },
+  { icon: 'walkin', label: 'Walk-ins Welcome', sub: 'WhatsApp bookings get priority' },
 ];
 
 export const SERVICES: ServiceItem[] = [
-  // Hair Architecture
+  // Haircuts & Fades
   {
     id: "sig-cut",
-    name: "Signature Haircut & Precision Fade",
+    name: "Signature Haircut & Skin Fade",
     category: "hair",
     durationMinutes: 45,
     priceMin: 350,
     priceMax: 450,
-    shortDesc: "Face-structure guided scissor architecture, low or skin drop fade, scalp wash, and matte clay finish.",
+    shortDesc: "Haircut styled for your face shape with a smooth skin or low fade, refreshing hair wash, and natural matte styling.",
     inclusions: [
-      "Face-shape consultation",
-      "Sterilized shear work & micro-clipper taper",
-      "Botanical scalp wash",
-      "Blow-dry & matte texture wax styling"
+      "Quick face-shape & hair growth check",
+      "Clean scissor cut & smooth clipper fade",
+      "Refreshing shampoo hair wash",
+      "Blow-dry & natural matte wax finish"
     ],
     popular: true,
   },
   {
     id: "executive-scissor",
-    name: "Classic Executive Scissor Cut",
+    name: "Classic Scissor Cut & Taper",
     category: "hair",
     durationMinutes: 40,
     priceMin: 300,
     priceMax: 400,
-    shortDesc: "Handcrafted pure shear layering, clean sideburn taper, neck razor line, and natural pomade finish.",
+    shortDesc: "Neat scissor haircut with clean sideburns, sharp neck line-up, and a smart everyday finish for office or daily wear.",
     inclusions: [
-      "Head anatomy consultation",
-      "Point cutting & shear-over-comb texturing",
-      "Neckline hot foam razor detail",
-      "Rosemary cooling scalp tonic"
+      "Style check according to your hair volume",
+      "Full scissor layering & side taper",
+      "Warm foam neck razor clean-up",
+      "Cooling hair tonic massage"
     ],
   },
   {
     id: "tattoo-line",
-    name: "Tattoo Razor Line & Hair Art Cut",
+    name: "Sharp Razor Line & Hair Design Cut",
     category: "hair",
     durationMinutes: 50,
     priceMin: 500,
     priceMax: 700,
-    shortDesc: "Geometric razor parting, neckline etching, hairline detail, and custom straight-blade hair art lines.",
+    shortDesc: "Clean skin fade with a sharp razor side-part or custom hair line design using a fresh straight blade.",
     inclusions: [
-      "Custom stencil / freehand geometry design",
-      "High-precision straight razor carving",
-      "Antiseptic skin mist",
-      "Full perimeter transition fade"
+      "Custom side-part or razor line design",
+      "Fresh single-use straight blade detailing",
+      "Soothing after-cut skin spray",
+      "Smooth all-around fade blend"
     ],
     popular: true,
   },
 
-  // Beard Craft
+  // Beard Trimming
   {
     id: "beard-detail",
-    name: "Beard Detailing & Razor Line",
+    name: "Sharp Beard Trim & Razor Line-Up",
     category: "beard",
     durationMinutes: 30,
     priceMin: 200,
     priceMax: 300,
-    shortDesc: "Straight razor outline, neckline taper, herbal hot towel hydration, and organic argan conditioning beard oil.",
+    shortDesc: "Crisp cheek and neck lines with a fresh blade, warm towel steam to soften hair, and nourishing beard oil.",
     inclusions: [
-      "Hot towel eucalyptus steam prep",
-      "Single-use Japanese straight razor contouring",
-      "Mustache scissor detailing & cheek graduation",
-      "Cooling alum block & organic beard elixir"
+      "Warm steam towel to soften beard",
+      "Fresh single-use blade for sharp cheek & neck lines",
+      "Mustache & jawline length balancing",
+      "Cooling alum rub & non-sticky beard oil"
     ],
     popular: true,
   },
   {
     id: "royal-shave",
-    name: "Traditional Hot Towel Straight Razor Shave",
+    name: "Hot Towel Straight Razor Shave",
     category: "beard",
     durationMinutes: 35,
     priceMin: 250,
     priceMax: 350,
-    shortDesc: "Triple hot towel relaxation with badger brush lathering, two-pass straight blade precision, and cold compress.",
+    shortDesc: "Relaxing warm towel steam, rich shaving foam, and a smooth zero-irritation shave with a brand-new blade.",
     inclusions: [
-      "Pre-shave essential oil application",
-      "Warm whipped sandalwood lather",
-      "Two-pass sterile straight razor finish",
-      "Ice-cold witch hazel compress & aftershave balm"
+      "Pre-shave softening oil",
+      "Warm rich lather application",
+      "Smooth shave with a fresh sealed blade",
+      "Cool towel press & soothing aftershave balm"
     ],
   },
 
-  // Spa Rituals
+  // Scalp & Facial Care
   {
     id: "scalp-spa",
-    name: "Revitalizing Scalp & Hair Care Spa",
+    name: "Relaxing Head Massage & Hair Spa",
     category: "spa",
     durationMinutes: 40,
     priceMin: 600,
     priceMax: 800,
-    shortDesc: "Deep detoxifying scalp therapy with micro-circulation massage, herbal steam infusion, and root strengthening serum.",
+    shortDesc: "Deeply relaxing 20-minute head and shoulder massage, warm hair steam, and anti-dandruff scalp wash.",
     inclusions: [
-      "Micro-camera hair & scalp diagnostic",
-      "Warm essential oil acupressure massage (20 mins)",
-      "Hydrating steam oxygenation bath",
-      "Cold-water pore closure & tonic mist"
+      "Scalp dryness & dandruff check",
+      "20-minute warm oil head & neck massage",
+      "Gentle steam towel treatment",
+      "Cool wash & hair strengthening serum"
     ],
     popular: true,
   },
   {
     id: "charcoal-detox",
-    name: "Express Charcoal Face Detox & Clean-up",
+    name: "Charcoal Face Clean-Up & Detan",
     category: "spa",
     durationMinutes: 25,
     priceMin: 300,
     priceMax: 400,
-    shortDesc: "Active bamboo charcoal scrub to extract pollution and dead skin cells, followed by a cool hydrating mist.",
+    shortDesc: "Removes dust, oil, and sun tan with an active charcoal scrub, warm steam, and a cooling aloe vera mask.",
     inclusions: [
-      "Herbal facial cleanse & warm steam",
-      "Gentle ultrasonic exfoliation",
-      "Cooling aloe vera & mint soothing mask"
+      "Deep face wash & warm pore-opening steam",
+      "Charcoal scrub to clear blackheads & tan",
+      "Cooling aloe vera & mint face pack"
     ],
   },
   {
     id: "royal-experience",
-    name: "The Royal Grooming Experience (Complete Package)",
+    name: "Full Grooming Combo (Haircut + Beard + Massage + Face Clean-Up)",
     category: "spa",
     durationMinutes: 90,
     priceMin: 1200,
     priceMax: 1500,
-    shortDesc: "The complete studio service: Signature Cut, Razor Beard Detail, Scalp Spa Therapy, and Express Face Charcoal Clean-up.",
+    shortDesc: "Complete 90-minute makeover: Signature Haircut, Sharp Beard Line-Up, Head Massage Spa, and Charcoal Face Clean-Up.",
     inclusions: [
-      "All 4 core services included",
-      "Extended 25-minute neck & shoulder massage",
-      "Complimentary beverage & hair care consultation",
-      "Priority chair reservation"
+      "All 4 popular salon services included",
+      "25-minute relaxing head, neck & shoulder massage",
+      "Easy daily hair & beard styling tips",
+      "Zero-wait priority chair booking"
     ],
     popular: true,
   }
@@ -171,22 +171,22 @@ export interface QuizOption {
 
 export const QUIZ_QUESTIONS = {
   faceShapes: [
-    { id: 'square', label: 'Square Jawline', description: 'Bold angular jaw, wide cheekbones & uniform forehead width' },
-    { id: 'oval', label: 'Oval Silhouette', description: 'Balanced symmetry, forehead slightly wider than rounded jaw' },
-    { id: 'round', label: 'Round Contour', description: 'Soft curved angles with cheekbones matching face length' },
-    { id: 'diamond', label: 'Diamond / Angular', description: 'Prominent wide cheekbones with narrow chin and temples' },
+    { id: 'square', label: 'Square / Strong Jaw', description: 'Broad forehead and a sharp, wide jawline' },
+    { id: 'oval', label: 'Oval / Balanced', description: 'Evenly balanced face length with a slightly rounded chin' },
+    { id: 'round', label: 'Round Face', description: 'Full cheeks with soft corners around the chin and jaw' },
+    { id: 'diamond', label: 'Sharp Cheekbones / Angular', description: 'Wide cheekbones with a narrower forehead and chin' },
   ],
   hairTypes: [
-    { id: 'straight', label: 'Straight & Fine', description: 'Grows flat, benefits from textured volume & matte finish' },
-    { id: 'wavy', label: 'Wavy / Medium Thick', description: 'Natural movement, holds textured layers & slick tapers' },
-    { id: 'coarse', label: 'Curly or Coarse', description: 'High density, looks sharp with low/mid skin fades' },
-    { id: 'receding', label: 'High Forehead / Receding', description: 'Engineered crops and textured micro-fringes' },
+    { id: 'straight', label: 'Straight & Silky', description: 'Sits flat easily — looks great with textured volume on top' },
+    { id: 'wavy', label: 'Wavy / Medium Thick', description: 'Natural wave that holds side parts, crops, and fades well' },
+    { id: 'coarse', label: 'Thick or Curly', description: 'Heavy volume — looks super clean with short faded sides' },
+    { id: 'receding', label: 'Thinning / High Forehead', description: 'Needs a smart crop or neat short cut that makes hair look fuller' },
   ],
   vibes: [
-    { id: 'executive', label: 'Sharp Executive', description: 'Polished, clean scissor taper, office & boardroom ready' },
-    { id: 'streetwear', label: 'Textured Modern', description: 'Drop fade, choppy French crop, effortless matte texture' },
-    { id: 'classic', label: 'Classic Gentleman', description: 'Side part, slick comb-over, sculpted beard line' },
-    { id: 'edgy', label: 'Artisan Razor Edge', description: 'Skin fade with geometric razor parting & sharp goatee' },
+    { id: 'executive', label: 'Clean Office Look', description: 'Neat scissor cut and tidy sides that stay sharp all week' },
+    { id: 'streetwear', label: 'Trendy Skin Fade', description: 'Sharp drop fade on the sides with textured volume on top' },
+    { id: 'classic', label: 'Classic Gentleman', description: 'Clean side part with a well-shaped beard and razor line-up' },
+    { id: 'edgy', label: 'Bold Razor Line & Fade', description: 'High skin fade with a crisp razor line and sharp beard edges' },
   ]
 };
 
@@ -199,47 +199,47 @@ export interface RecommendationResult {
 }
 
 export function computeQuizRecommendation(
-  face: string,
-  hair: string,
+  _face: string,
+  _hair: string,
   vibe: string
 ): RecommendationResult {
   if (vibe === 'streetwear') {
     return {
-      title: 'French Textured Crop with Drop Skin Fade',
-      fadeType: 'Low-to-Mid Drop Skin Fade with razor nape outline',
-      beardAdvice: 'Trimmed 3mm stubble with razor-sharp cheek line',
-      stylingTip: 'Matte texture styling powder on damp hair with finger separation.',
-      matchScore: '98% Geometric Match',
+      title: 'Textured Crop with Low Drop Skin Fade',
+      fadeType: 'Clean low-to-mid skin fade on the sides with a sharp neck line',
+      beardAdvice: 'Short neat stubble with a crisp razor line on the cheeks',
+      stylingTip: 'Rub a pinch of matte hair powder or clay on dry hair with your fingers.',
+      matchScore: '98% Style Match',
     };
   }
 
   if (vibe === 'executive') {
     return {
-      title: 'Executive Low Taper with Scissor-Sculpted Crown',
-      fadeType: 'Low Scissor Taper with zero-bulk temple transition',
-      beardAdvice: 'Full classic corporate beard faded smoothly into sideburns',
-      stylingTip: 'Water-soluble light sheen pomade blown back with round brush.',
-      matchScore: '96% Geometric Match',
+      title: 'Smart Scissor Cut with Clean Low Taper',
+      fadeType: 'Neat scissor taper around the ears and neck — not too bare',
+      beardAdvice: 'Well-trimmed beard blended smoothly into the sideburns',
+      stylingTip: 'Use a light hair cream after towel-drying and comb neatly to one side.',
+      matchScore: '96% Style Match',
     };
   }
 
   if (vibe === 'edgy') {
     return {
-      title: 'High Razor Skin Fade with Geometric Hair Art Line',
-      fadeType: 'High Bald Fade with surgically clean parting groove',
-      beardAdvice: 'Crisp straight-edge angular goatee with detached mustache',
-      stylingTip: 'Strong hold matte clay to keep crown defined all day.',
-      matchScore: '97% Geometric Match',
+      title: 'High Skin Fade with Sharp Razor Parting',
+      fadeType: 'High zero fade with a clean straight-blade line on the side',
+      beardAdvice: 'Sharp angular beard or goatee with crisp neck and cheek edges',
+      stylingTip: 'Apply strong-hold matte clay to keep the top standing sharp all day.',
+      matchScore: '97% Style Match',
     };
   }
 
   // default / classic
   return {
-    title: 'Modern Classic Side Part with Taper Fade',
-    fadeType: 'Mid Taper Fade preserving weight on the parietal ridge',
-    beardAdvice: 'Natural cheek graduation with hot towel straight razor neck clean-up',
-    stylingTip: 'Texturizing sea salt spray followed by medium-hold paste.',
-    matchScore: '99% Geometric Match',
+    title: 'Classic Side Part with Smooth Taper Fade',
+    fadeType: 'Medium taper fade that keeps natural fullness on the sides',
+    beardAdvice: 'Natural full beard with a hot towel straight-razor neck clean-up',
+    stylingTip: 'Blow-dry lightly and finish with a medium-hold styling paste.',
+    matchScore: '99% Style Match',
   };
 }
 
@@ -250,7 +250,7 @@ export const REVIEWS: ReviewItem[] = [
     rating: 5,
     reviewDate: "2 weeks ago",
     serviceDone: "Signature Haircut & Beard Shaping",
-    comment: "Incredible attention to detail. The master barber actually takes time to analyze your face structure and hair growth direction before picking up a clipper. Best grooming experience in Bhopal.",
+    comment: "Incredible attention to detail. The master barber actually checks your face shape and hair growth before picking up a clipper. Best salon experience in Bhopal.",
     badge: "Verified Regular",
   },
   {
@@ -258,8 +258,8 @@ export const REVIEWS: ReviewItem[] = [
     clientName: "Anil",
     rating: 5,
     reviewDate: "1 month ago",
-    serviceDone: "Skin Drop Fade & Hot Towel Razor Detail",
-    comment: "Best fade and razor beard line-up in Bhensakhedi. The eucalyptus hot towel ritual and straight razor precision are completely unmatched anywhere near The Fitness Planet.",
+    serviceDone: "Skin Drop Fade & Hot Towel Beard Line-Up",
+    comment: "Best fade and razor beard line-up on Bhensakhedi Road. The warm towel steam and fresh blade finish are unmatched anywhere near The Fitness Planet.",
     badge: "Verified Local Guide",
   },
   {
@@ -267,112 +267,190 @@ export const REVIEWS: ReviewItem[] = [
     clientName: "Mannu",
     rating: 5,
     reviewDate: "3 weeks ago",
-    serviceDone: "Scalp Spa & Executive Cut",
-    comment: "Clean, hygienic, premium equipment, fresh disposable capes, and zero rush. Truly a masterclass in modern men's grooming. You get full undivided attention for 45 minutes.",
-    badge: "Verified Client",
+    serviceDone: "Head Massage Spa & Classic Cut",
+    comment: "Super clean salon, UV-cleaned tools, fresh blades, and zero rush. You get full attention for 45 minutes and walk out looking sharp every time.",
+    badge: "Verified Customer",
   },
   {
     id: "rev-4",
     clientName: "Raju Bhai",
     rating: 5,
     reviewDate: "2 months ago",
-    serviceDone: "The Royal Grooming Experience",
-    comment: "Shivangi Salon is the gold standard around Bhopal. Precision razor cuts every single time with zero irritation. Book in advance on WhatsApp because chairs fill up fast!",
-    badge: "Verified Client",
+    serviceDone: "Full Grooming Combo",
+    comment: "Shivangi Hair Salon is the best around Bhopal. Clean razor cuts every single time with zero skin irritation. Book on WhatsApp before coming on weekends!",
+    badge: "Verified Customer",
   }
 ];
 
-export const LOOKBOOK_ITEMS = [
-  {
-    id: "look-1",
-    title: "Precision Textured Crop & Drop Fade",
-    category: "Skin Fade",
-    desc: "Structured French crop with matte micro-texture and skin-drop perimeter.",
-    image: "/crop_fade.jpg",
-  },
-  {
-    id: "look-2",
-    title: "Razor-Etched Beard Architecture",
-    category: "Beard Detailing",
-    desc: "Straight-razor cheek gradient with hot towel conditioning and chin symmetry.",
-    image: "/beard_sculpt.jpg",
-  },
-  {
-    id: "look-3",
-    title: "Hot Towel Straight Razor Detailing",
-    category: "Hot Towel Shave",
-    desc: "Precise straight razor detailing with balanced weight distribution.",
-    image: "/razor_shave.jpg",
-  },
-  {
-    id: "look-4",
-    title: "Studio Sanctuary Interior",
-    category: "Studio",
-    desc: "Matte obsidian studio equipped with autoclave sanitizers.",
-    image: "/interior_luxury.jpg",
-  }
-];
-
-export interface ShowcaseSlide {
+export interface LookbookItem {
   id: string;
   title: string;
-  tag: string;
+  category: 'Skin Fade' | 'Beard Detailing' | 'Hot Towel Shave' | 'Salon';
+  desc: string;
+  locationTag: string;
   image: string;
+  imageClassName?: string;
+  isSalonPhoto?: boolean;
 }
 
-export const SHOWCASE_SLIDES: ShowcaseSlide[] = [
+/**
+ * 16 Gallery Items — Strictly 4 items per category (Skin Fade, Beard Detailing, Hot Towel Shave, Salon).
+ * NEVER uses /barber.jpg or /logo.jpg.
+ */
+export const LOOKBOOK_ITEMS: LookbookItem[] = [
+  // 1. Skin Fade (4 items)
   {
-    id: "slide-1",
-    title: "Shivangi Studio Station",
-    tag: "Studio Ambience",
-    image: "/salon_station.jpg",
-  },
-  {
-    id: "slide-2",
-    title: "Dedicated Barber Chairs",
-    tag: "Sanctuary",
-    image: "/salon_chair.jpg",
-  },
-  {
-    id: "slide-3",
-    title: "The Master Craftsman",
-    tag: "Lead Barber",
-    image: "/barber.jpg",
-  },
-  {
-    id: "slide-4",
-    title: "Drop Fade & Textured Crop",
-    tag: "Hair Architecture",
+    id: "fade-1",
+    title: "Textured Crop & Skin Fade",
+    category: "Skin Fade",
+    desc: "Clean side fade with natural volume on top.",
+    locationTag: "Bhopal Salon",
     image: "/crop_fade.jpg",
+    imageClassName: "object-cover object-center",
   },
   {
-    id: "slide-5",
-    title: "Razor-Etched Beard Silhouette",
-    tag: "Beard Craft",
+    id: "fade-2",
+    title: "High-Contrast Zero Taper",
+    category: "Skin Fade",
+    desc: "Sharp temple fade blended smoothly with scissor work.",
+    locationTag: "Bhopal Salon",
+    image: "/crop_fade.jpg",
+    imageClassName: "object-cover object-[35%_20%] scale-[1.14]",
+  },
+  {
+    id: "fade-3",
+    title: "Low Drop Fade & Line-Up",
+    category: "Skin Fade",
+    desc: "Smooth back-and-side fade shaped around your head.",
+    locationTag: "Bhopal Salon",
+    image: "/crop_fade.jpg",
+    imageClassName: "object-cover object-[65%_25%] scale-[1.18]",
+  },
+  {
+    id: "fade-4",
+    title: "Classic Side-Part & Taper Cut",
+    category: "Skin Fade",
+    desc: "Smart everyday look with clean neck and sideburn edges.",
+    locationTag: "Bhopal Salon",
+    image: "/crop_fade.jpg",
+    imageClassName: "object-cover object-[50%_15%] scale-[1.12]",
+  },
+
+  // 2. Beard Detailing (4 items)
+  {
+    id: "beard-1",
+    title: "Sharp Razor Beard Line-Up",
+    category: "Beard Detailing",
+    desc: "Crisp cheek and neck lines with a fresh straight blade.",
+    locationTag: "Bhopal Salon",
     image: "/beard_sculpt.jpg",
+    imageClassName: "object-cover object-center",
   },
   {
-    id: "slide-6",
-    title: "Hot Towel Straight Razor Ritual",
-    tag: "Spa Ritual",
+    id: "beard-2",
+    title: "Full Beard Shape & Fade",
+    category: "Beard Detailing",
+    desc: "Smooth blend from sideburns into a well-groomed beard.",
+    locationTag: "Bhopal Salon",
+    image: "/beard_sculpt.jpg",
+    imageClassName: "object-cover object-[35%_30%] scale-[1.15]",
+  },
+  {
+    id: "beard-3",
+    title: "Clean Jawline & Mustache Trim",
+    category: "Beard Detailing",
+    desc: "Balanced beard length that makes your jawline look sharper.",
+    locationTag: "Bhopal Salon",
+    image: "/beard_sculpt.jpg",
+    imageClassName: "object-cover object-[65%_35%] scale-[1.18]",
+  },
+  {
+    id: "beard-4",
+    title: "Beard Wash, Oil & Styling",
+    category: "Beard Detailing",
+    desc: "Softening beard care followed by neat trimmer detailing.",
+    locationTag: "Bhopal Salon",
+    image: "/beard_sculpt.jpg",
+    imageClassName: "object-cover object-[50%_20%] scale-[1.12]",
+  },
+
+  // 3. Hot Towel Shave (4 items)
+  {
+    id: "shave-1",
+    title: "Hot Towel Straight Razor Shave",
+    category: "Hot Towel Shave",
+    desc: "Warm steam towel prep followed by a smooth zero-irritation shave.",
+    locationTag: "Bhopal Salon",
     image: "/razor_shave.jpg",
+    imageClassName: "object-cover object-center",
   },
   {
-    id: "slide-7",
-    title: "Precision Sanctuary Interior",
-    tag: "Bhopal Studio",
+    id: "shave-2",
+    title: "Double-Towel Refresh Ritual",
+    category: "Hot Towel Shave",
+    desc: "Hot towel pore cleaning finished with a cool soothing towel.",
+    locationTag: "Bhopal Salon",
+    image: "/razor_shave.jpg",
+    imageClassName: "object-cover object-[30%_25%] scale-[1.15]",
+  },
+  {
+    id: "shave-3",
+    title: "Close Feather-Blade Shave",
+    category: "Hot Towel Shave",
+    desc: "Rich foam lather and a fresh Japanese blade for baby-smooth skin.",
+    locationTag: "Bhopal Salon",
+    image: "/razor_shave.jpg",
+    imageClassName: "object-cover object-[70%_30%] scale-[1.18]",
+  },
+  {
+    id: "shave-4",
+    title: "Face Steam & Cooling Aftershave Care",
+    category: "Hot Towel Shave",
+    desc: "Relaxing steam therapy with cooling post-shave balm.",
+    locationTag: "Bhopal Salon",
+    image: "/razor_shave.jpg",
+    imageClassName: "object-cover object-[50%_18%] scale-[1.12]",
+  },
+
+  // 4. Salon (4 items - with watermark crop classes)
+  {
+    id: "salon-1",
+    title: "Main Salon Floor & Barber Chairs",
+    category: "Salon",
+    desc: "Comfortable black hydraulic grooming chairs at Shivangi Hair Salon.",
+    locationTag: "Bhopal Salon",
     image: "/interior_luxury.jpg",
+    imageClassName: "object-cover object-[center_15%] scale-[1.12]",
+    isSalonPhoto: true,
   },
   {
-    id: "slide-8",
-    title: "Geometric Hair Art & Parting",
-    tag: "Tattoo Razor Lines",
-    image: "/src/assets/images/hero_barber_craft_1794039371325.jpg",
+    id: "salon-2",
+    title: "Mirror Stations & Grooming Setup",
+    category: "Salon",
+    desc: "Bright mirror stations stocked with top hair and beard care products.",
+    locationTag: "Bhopal Salon",
+    image: "/interior_luxury.jpg",
+    imageClassName: "object-cover object-[left_15%] scale-[1.15]",
+    isSalonPhoto: true,
   },
   {
-    id: "slide-9",
-    title: "Pure Shear Scissor Layering",
-    tag: "Master Craft",
-    image: "/src/assets/images/barber_portrait_master_1794039371557.jpg",
+    id: "salon-3",
+    title: "UV Tool Sanitizer & Clean Setup",
+    category: "Salon",
+    desc: "UV cabinet and cleaner used after every single customer.",
+    locationTag: "Bhopal Salon",
+    image: "/interior_luxury.jpg",
+    imageClassName: "object-cover object-[right_15%] scale-[1.15]",
+    isSalonPhoto: true,
+  },
+  {
+    id: "salon-4",
+    title: "Pro Clippers, Scissors & Fresh Blades",
+    category: "Salon",
+    desc: "High-precision trimmers, scissors, and sealed single-use blades.",
+    locationTag: "Bhopal Salon",
+    image: "/interior_luxury.jpg",
+    imageClassName: "object-cover object-[center_20%] scale-[1.16]",
+    isSalonPhoto: true,
   },
 ];

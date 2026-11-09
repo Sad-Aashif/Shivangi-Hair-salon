@@ -151,7 +151,7 @@ export function formatWhatsAppBookingMessage(
     `*Pricing:* Consultation Required`,
     data.notes ? `*Notes/Preferences:* ${data.notes.trim()}` : ``,
     ``,
-    `*Studio Location:* Near The Fitness Planet, Bhensakhedi Road, Bhopal`,
+    `*Salon Location:* Near The Fitness Planet, Bhensakhedi Road, Bhopal`,
     `Kindly confirm chair availability.`
   ].filter(line => line !== null && line !== undefined).join('\n');
 }

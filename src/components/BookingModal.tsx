@@ -71,7 +71,7 @@ export default function BookingModal({
   if (!isOpen) return null;
 
   const timeSlots = generateTimeSlots();
-  const { totalDurationMinutes, minPrice, maxPrice } = calculateBookingTotal(
+  const { totalDurationMinutes } = calculateBookingTotal(
     formData.selectedServices,
     SERVICES
   );
@@ -134,57 +134,57 @@ export default function BookingModal({
       aria-labelledby="booking-modal-title"
     >
       <div 
-        className="relative w-full max-w-2xl rounded-3xl bg-[#F5F1E8] dark:bg-[#121212] border border-[#D5C9B3] dark:border-[#262626] shadow-2xl p-6 sm:p-8 my-8 max-h-[92vh] overflow-y-auto text-[#141414] dark:text-[#F5F1E8]"
+        className="relative w-full max-w-2xl rounded-2xl bg-[#F4F1EA] dark:bg-[#121214] border border-stone-900/10 dark:border-white/10 shadow-2xl p-6 sm:p-8 my-8 max-h-[92vh] overflow-y-auto text-[#141413] dark:text-[#F4F1EA]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-xl text-[#635E54] dark:text-[#A6A095] hover:text-[#141414] dark:hover:text-[#F5F1E8] hover:bg-black/5 dark:hover:bg-[#1E1E1E] transition-colors cursor-pointer"
+          className="absolute top-5 right-5 w-11 h-11 rounded-xl text-[#57534E] dark:text-[#A1A1AA] hover:text-[#141413] dark:hover:text-[#F4F1EA] hover:bg-stone-900/5 dark:hover:bg-white/10 transition-colors flex items-center justify-center cursor-pointer"
           aria-label="Close booking modal"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Modal Header */}
-        <div className="space-y-1 pb-5 border-b border-[#E2DACB] dark:border-[#262626] pr-10">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#25D366]">
+        <div className="space-y-1 pb-5 border-b border-stone-900/10 dark:border-white/10 pr-12">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#9A7848] dark:text-[#C5A059]">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Direct WhatsApp Chair Reservation</span>
+            <span>Direct WhatsApp Chair Booking</span>
           </div>
-          <h2 id="booking-modal-title" className="font-display text-2xl sm:text-3xl font-bold text-[#141414] dark:text-[#F5F1E8]">
-            Book at Shivangi Hair Salon
+          <h2 id="booking-modal-title" className="font-display text-2xl sm:text-3xl font-bold text-[#141413] dark:text-[#F4F1EA]">
+            Book Your Chair at Shivangi Salon
           </h2>
-          <p className="text-xs sm:text-sm text-[#4A4742] dark:text-[#A6A095]">
-            Select services, preferred date & time. Message sends directly to barber at <span className="font-mono font-bold text-[#141414] dark:text-[#F5F1E8]">+91 9575830421</span>.
+          <p className="text-xs sm:text-sm text-[#57534E] dark:text-[#A1A1AA]">
+            Select your services, date & time. Your booking message goes straight to our salon WhatsApp at <span className="font-mono font-bold text-[#141413] dark:text-[#F4F1EA]">+91 9575830421</span>.
           </p>
         </div>
 
         {submitted ? (
           <div className="py-10 text-center space-y-4">
-            <div className="w-16 h-16 mx-auto rounded-full bg-[#25D366]/20 border border-[#25D366]/40 flex items-center justify-center text-[#25D366] shadow-lg">
-              <Check className="w-8 h-8 stroke-[3]" />
+            <div className="w-16 h-16 mx-auto rounded-full bg-[#C5A059]/20 border border-[#C5A059]/40 flex items-center justify-center text-[#9A7848] dark:text-[#C5A059] shadow-lg">
+              <Check className="w-8 h-8 stroke-[2.5]" />
             </div>
-            <h3 className="font-display text-2xl font-bold text-[#141414] dark:text-[#F5F1E8]">
-              WhatsApp Request Dispatched
+            <h3 className="font-display text-2xl font-bold text-[#141413] dark:text-[#F4F1EA]">
+              WhatsApp Request Ready
             </h3>
-            <p className="text-sm text-[#4A4742] dark:text-[#A6A095] max-w-md mx-auto leading-relaxed">
-              Appointment details encoded and opened in WhatsApp. Chair availability confirmed directly via WhatsApp.
+            <p className="text-sm text-[#57534E] dark:text-[#A1A1AA] max-w-md mx-auto leading-relaxed">
+              Your appointment details have opened in WhatsApp. Send the message to confirm your chair slot.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
               <button
                 type="button"
                 onClick={() => setSubmitted(false)}
-                className="px-5 py-2.5 rounded-xl text-xs font-semibold border border-[#D5C9B3] dark:border-[#262626] bg-white dark:bg-[#161616] text-[#141414] dark:text-[#F5F1E8] cursor-pointer"
+                className="min-h-[44px] px-5 py-2.5 rounded-xl text-xs font-semibold border border-stone-900/10 dark:border-white/10 bg-[#EBE6DC] dark:bg-[#18181B] text-[#141413] dark:text-[#F4F1EA] cursor-pointer"
               >
-                Modify Reservation
+                Edit Booking
               </button>
               <button
                 type="button"
                 onClick={onClose}
-                className="px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider btn-call cursor-pointer"
+                className="min-h-[44px] px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider btn-call cursor-pointer"
               >
                 Close Window
               </button>
@@ -193,15 +193,15 @@ export default function BookingModal({
         ) : (
           <form onSubmit={handleBookViaWhatsApp} className="mt-6 space-y-6">
             
-            {/* 1. Service Selection */}
+            {/* 1. Service Selection (Non-CTA selection highlights use Champagne Brass instead of green) */}
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <label className="text-xs font-bold uppercase tracking-wider text-[#141414] dark:text-[#F5F1E8] flex items-center gap-1.5">
-                  <Scissors className="w-3.5 h-3.5 text-[#B8973E] dark:text-[#D4AF37]" />
+                <label className="text-xs font-bold uppercase tracking-wider text-[#141413] dark:text-[#F4F1EA] flex items-center gap-1.5">
+                  <Scissors className="w-3.5 h-3.5 text-[#9A7848] dark:text-[#C5A059]" />
                   <span>1. Select Grooming Services</span>
                 </label>
-                <span className="text-xs text-[#635E54] dark:text-[#A6A095]">
-                  Duration: <strong className="text-[#141414] dark:text-[#F5F1E8] font-mono">~{totalDurationMinutes} mins</strong> · Consultation Required
+                <span className="text-xs text-[#57534E] dark:text-[#A1A1AA]">
+                  Duration: <strong className="text-[#141413] dark:text-[#F4F1EA] font-mono">~{totalDurationMinutes} mins</strong>
                 </span>
               </div>
 
@@ -220,24 +220,24 @@ export default function BookingModal({
                       type="button"
                       key={s.id}
                       onClick={() => toggleService(s.id)}
-                      aria-label={`${s.name}, ${s.durationMinutes} minutes, Consultation Required`}
+                      aria-label={`${s.name}, ${s.durationMinutes} minutes`}
                       aria-pressed={isChecked}
                       className={`p-3 rounded-xl border text-left flex items-start justify-between gap-2 transition-all cursor-pointer ${
                         isChecked
-                          ? 'bg-white dark:bg-[#161616] border-[#25D366] text-[#141414] dark:text-[#F5F1E8] shadow-sm ring-1 ring-[#25D366]'
-                          : 'bg-white/50 dark:bg-[#121212] border-[#D5C9B3] dark:border-[#262626] text-[#4A4742] dark:text-[#A6A095] hover:border-neutral-400'
+                          ? 'bg-[#EBE6DC] dark:bg-[#18181B] border-[#9A7848] dark:border-[#C5A059] text-[#141413] dark:text-[#F4F1EA] shadow-sm'
+                          : 'bg-[#EBE6DC]/50 dark:bg-[#0B0B0C] border-stone-900/10 dark:border-white/10 text-[#57534E] dark:text-[#A1A1AA] hover:border-[#9A7848]/50 dark:hover:border-[#C5A059]/50'
                       }`}
                     >
                       <div className="space-y-1">
-                        <p className={`text-xs font-bold ${isChecked ? 'text-[#141414] dark:text-[#F5F1E8]' : 'text-[#3D3A35] dark:text-[#A6A095]'}`}>
+                        <p className={`text-xs font-bold ${isChecked ? 'text-[#141413] dark:text-[#F4F1EA]' : 'text-[#57534E] dark:text-[#A1A1AA]'}`}>
                           {s.name}
                         </p>
-                        <p className="text-[11px] text-[#635E54] dark:text-[#A6A095]">
-                          {s.durationMinutes} mins · Consultation Required
+                        <p className="text-[11px] text-[#57534E] dark:text-[#A1A1AA]">
+                          {s.durationMinutes} mins · Salon Consultation
                         </p>
                       </div>
                       <div className={`w-4 h-4 rounded border flex items-center justify-center shrink-0 mt-0.5 ${
-                        isChecked ? 'bg-[#25D366] border-[#25D366] text-white' : 'border-neutral-400 dark:border-neutral-600'
+                        isChecked ? 'bg-[#9A7848] dark:bg-[#C5A059] border-[#9A7848] dark:border-[#C5A059] text-white dark:text-black' : 'border-stone-400 dark:border-zinc-600'
                       }`}>
                         {isChecked && <Check className="w-3 h-3 stroke-[3]" />}
                       </div>
@@ -252,8 +252,8 @@ export default function BookingModal({
               
               {/* Date */}
               <div className="space-y-1.5">
-                <label htmlFor="booking-date" className="text-xs font-bold uppercase tracking-wider text-[#141414] dark:text-[#F5F1E8] flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#B8973E] dark:text-[#D4AF37]" />
+                <label htmlFor="booking-date" className="text-xs font-bold uppercase tracking-wider text-[#141413] dark:text-[#F4F1EA] flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-[#9A7848] dark:text-[#C5A059]" />
                   <span>2. Preferred Date</span>
                 </label>
                 <input
@@ -262,8 +262,8 @@ export default function BookingModal({
                   min={todayStr}
                   value={formData.date}
                   onChange={(e) => handleDateChange(e.target.value)}
-                  className={`w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#161616] border text-xs sm:text-sm text-[#141414] dark:text-[#F5F1E8] focus:outline-none focus:border-[#25D366] ${
-                    errors.date ? 'border-rose-500' : 'border-[#D5C9B3] dark:border-[#262626]'
+                  className={`w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#0B0B0C] border text-xs sm:text-sm text-[#141413] dark:text-[#F4F1EA] focus:outline-none focus:border-[#9A7848] dark:focus:border-[#C5A059] ${
+                    errors.date ? 'border-rose-500' : 'border-stone-900/15 dark:border-white/15'
                   }`}
                   required
                 />
@@ -273,16 +273,16 @@ export default function BookingModal({
                     <span>{errors.date}</span>
                   </p>
                 ) : (
-                  <p className="text-[11px] text-[#635E54] dark:text-[#A6A095]">
-                    Closed every Tuesday for studio sterilization.
+                  <p className="text-[11px] text-[#57534E] dark:text-[#A1A1AA]">
+                    Closed every Tuesday for salon deep cleaning.
                   </p>
                 )}
               </div>
 
               {/* Time slot */}
               <div className="space-y-1.5">
-                <label htmlFor="booking-time" className="text-xs font-bold uppercase tracking-wider text-[#141414] dark:text-[#F5F1E8] flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#B8973E] dark:text-[#D4AF37]" />
+                <label htmlFor="booking-time" className="text-xs font-bold uppercase tracking-wider text-[#141413] dark:text-[#F4F1EA] flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 text-[#9A7848] dark:text-[#C5A059]" />
                   <span>3. Preferred Time Slot</span>
                 </label>
                 <select
@@ -292,18 +292,18 @@ export default function BookingModal({
                     setFormData(prev => ({ ...prev, timeSlot: e.target.value }));
                     if (errors.timeSlot) setErrors(prev => ({ ...prev, timeSlot: '' }));
                   }}
-                  className={`w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#161616] border text-xs sm:text-sm text-[#141414] dark:text-[#F5F1E8] focus:outline-none focus:border-[#25D366] cursor-pointer ${
-                    errors.timeSlot ? 'border-rose-500' : 'border-[#D5C9B3] dark:border-[#262626]'
+                  className={`w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#0B0B0C] border text-xs sm:text-sm text-[#141413] dark:text-[#F4F1EA] focus:outline-none focus:border-[#9A7848] dark:focus:border-[#C5A059] cursor-pointer ${
+                    errors.timeSlot ? 'border-rose-500' : 'border-stone-900/15 dark:border-white/15'
                   }`}
                   required
                 >
                   {timeSlots.map((slot) => (
-                    <option key={slot} value={slot} className="bg-white dark:bg-[#161616] text-[#141414] dark:text-[#F5F1E8]">
+                    <option key={slot} value={slot} className="bg-white dark:bg-[#121214] text-[#141413] dark:text-[#F4F1EA]">
                       {slot}
                     </option>
                   ))}
                 </select>
-                <p className="text-[11px] text-[#635E54] dark:text-[#A6A095]">
+                <p className="text-[11px] text-[#57534E] dark:text-[#A1A1AA]">
                   Salon Hours: 8:30 AM – 9:30 PM
                 </p>
               </div>
@@ -314,7 +314,7 @@ export default function BookingModal({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               <div className="space-y-1.5">
-                <label htmlFor="client-name" className="text-xs font-bold uppercase tracking-wider text-[#141414] dark:text-[#F5F1E8]">
+                <label htmlFor="client-name" className="text-xs font-bold uppercase tracking-wider text-[#141413] dark:text-[#F4F1EA]">
                   Your Full Name
                 </label>
                 <input
@@ -326,8 +326,8 @@ export default function BookingModal({
                     setFormData(prev => ({ ...prev, fullName: e.target.value }));
                     if (errors.fullName) setErrors(prev => ({ ...prev, fullName: '' }));
                   }}
-                  className={`w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#161616] border text-xs sm:text-sm text-[#141414] dark:text-[#F5F1E8] focus:outline-none focus:border-[#25D366] ${
-                    errors.fullName ? 'border-rose-500' : 'border-[#D5C9B3] dark:border-[#262626]'
+                  className={`w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#0B0B0C] border text-xs sm:text-sm text-[#141413] dark:text-[#F4F1EA] focus:outline-none focus:border-[#9A7848] dark:focus:border-[#C5A059] ${
+                    errors.fullName ? 'border-rose-500' : 'border-stone-900/15 dark:border-white/15'
                   }`}
                   required
                 />
@@ -337,7 +337,7 @@ export default function BookingModal({
               </div>
 
               <div className="space-y-1.5">
-                <label htmlFor="client-phone" className="text-xs font-bold uppercase tracking-wider text-[#141414] dark:text-[#F5F1E8]">
+                <label htmlFor="client-phone" className="text-xs font-bold uppercase tracking-wider text-[#141413] dark:text-[#F4F1EA]">
                   WhatsApp Mobile Number
                 </label>
                 <input
@@ -349,8 +349,8 @@ export default function BookingModal({
                     setFormData(prev => ({ ...prev, phone: e.target.value }));
                     if (errors.phone) setErrors(prev => ({ ...prev, phone: '' }));
                   }}
-                  className={`w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#161616] border text-xs sm:text-sm text-[#141414] dark:text-[#F5F1E8] focus:outline-none focus:border-[#25D366] ${
-                    errors.phone ? 'border-rose-500' : 'border-[#D5C9B3] dark:border-[#262626]'
+                  className={`w-full min-h-[44px] px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#0B0B0C] border text-xs sm:text-sm text-[#141413] dark:text-[#F4F1EA] focus:outline-none focus:border-[#9A7848] dark:focus:border-[#C5A059] ${
+                    errors.phone ? 'border-rose-500' : 'border-stone-900/15 dark:border-white/15'
                   }`}
                   required
                 />
@@ -363,41 +363,41 @@ export default function BookingModal({
 
             {/* 4. Notes */}
             <div className="space-y-1.5">
-              <label htmlFor="client-notes" className="text-xs font-bold uppercase tracking-wider text-[#141414] dark:text-[#F5F1E8]">
-                Style Request / Face Shape Notes (Optional)
+              <label htmlFor="client-notes" className="text-xs font-bold uppercase tracking-wider text-[#141413] dark:text-[#F4F1EA]">
+                Style Request / Notes (Optional)
               </label>
               <input
                 id="client-notes"
                 type="text"
-                placeholder="e.g. Low drop fade, sharp beard contour, hot towel wash"
+                placeholder="e.g. Low drop fade, sharp beard line-up, hot towel shave"
                 value={formData.notes}
                 onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
-                className="w-full px-3.5 py-2 rounded-xl bg-white dark:bg-[#161616] border border-[#D5C9B3] dark:border-[#262626] text-xs sm:text-sm text-[#141414] dark:text-[#F5F1E8] focus:outline-none focus:border-[#25D366]"
+                className="w-full min-h-[44px] px-3.5 py-2 rounded-xl bg-white dark:bg-[#0B0B0C] border border-stone-900/15 dark:border-white/15 text-xs sm:text-sm text-[#141413] dark:text-[#F4F1EA] focus:outline-none focus:border-[#9A7848] dark:focus:border-[#C5A059]"
               />
             </div>
 
             {/* 5. Pre-filled WhatsApp Preview */}
-            <div className="p-3.5 rounded-2xl bg-[#EDE6D8] dark:bg-[#161616] border border-[#D5C9B3] dark:border-[#262626] space-y-2">
+            <div className="p-3.5 rounded-xl bg-[#EBE6DC] dark:bg-[#0B0B0C] border border-stone-900/10 dark:border-white/10 space-y-2">
               <div className="flex items-center justify-between text-xs">
-                <span className="font-bold text-[#141414] dark:text-[#F5F1E8] flex items-center gap-1.5">
+                <span className="font-bold text-[#141413] dark:text-[#F4F1EA] flex items-center gap-1.5">
                   <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
                   <span>WhatsApp Message Preview (+91 9575830421)</span>
                 </span>
                 <button
                   type="button"
                   onClick={handleCopyMessage}
-                  className="flex items-center gap-1 text-[11px] font-semibold text-[#8C6D23] dark:text-[#D4AF37] hover:underline cursor-pointer"
+                  className="flex items-center gap-1 text-[11px] font-semibold text-[#9A7848] dark:text-[#C5A059] hover:underline cursor-pointer"
                 >
-                  {copied ? <Check className="w-3 h-3 text-[#25D366]" /> : <Copy className="w-3 h-3" />}
+                  {copied ? <Check className="w-3 h-3 text-[#9A7848] dark:text-[#C5A059]" /> : <Copy className="w-3 h-3" />}
                   <span>{copied ? 'Copied' : 'Copy Text'}</span>
                 </button>
               </div>
-              <pre className="text-[11px] font-mono text-[#3D3A35] dark:text-[#A6A095] whitespace-pre-wrap bg-white/70 dark:bg-[#121212] p-2.5 rounded-lg border border-[#D5C9B3] dark:border-[#262626] max-h-24 overflow-y-auto">
+              <pre className="text-[11px] font-mono text-[#57534E] dark:text-[#A1A1AA] whitespace-pre-wrap bg-[#F4F1EA] dark:bg-[#121214] p-2.5 rounded-lg border border-stone-900/10 dark:border-white/10 max-h-24 overflow-y-auto">
                 {generatedPreview}
               </pre>
             </div>
 
-            {/* Action Buttons: Strict Green WhatsApp CTA */}
+            {/* Action Buttons: Strict Green WhatsApp CTA Preserved */}
             <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
               <button
                 type="submit"
@@ -410,7 +410,7 @@ export default function BookingModal({
               <button
                 type="button"
                 onClick={onClose}
-                className="w-full sm:w-auto px-5 py-4 rounded-xl text-xs font-semibold text-[#635E54] dark:text-[#A6A095] hover:text-[#141414] dark:hover:text-[#F5F1E8] border border-[#D5C9B3] dark:border-[#262626] cursor-pointer"
+                className="w-full sm:w-auto px-5 py-4 rounded-xl text-xs font-semibold text-[#57534E] dark:text-[#A1A1AA] hover:text-[#141413] dark:hover:text-[#F4F1EA] border border-stone-900/10 dark:border-white/10 cursor-pointer"
               >
                 Cancel
               </button>

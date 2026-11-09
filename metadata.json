@@ -1,6 +1,6 @@
 {
   "name": "Shivangi Hair Salon - Premier Men's Grooming Studio Bhopal",
-  "description": "Premier men's grooming & barber studio in Bhopal. Precision haircuts, beard detailing, razor shaping, and scalp therapy.",
+  "description": "Premier men's grooming & barber salon in Bhopal. Precision haircuts, beard detailing, razor shaping, and scalp therapy.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
